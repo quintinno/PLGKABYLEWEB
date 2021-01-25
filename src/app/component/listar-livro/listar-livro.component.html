@@ -1,0 +1,21 @@
+
+<table border="1" class="table">
+    <thead>
+        <tr>
+            <th>Imagem</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let livro_ of livroList">
+            <td><img [src]="livro_.urlImagem" height="80" width="70"/></td>
+            <td>{{livro_.nome}}</td>
+            <td>{{livro_.descricao}}</td>
+            <td>{{livro_.precoUnitatio | currency: 'BRL':true}}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>

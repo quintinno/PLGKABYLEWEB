@@ -1,0 +1,9 @@
+@font-face {
+	font-family: "Overlock";
+	src: url("/src/assets/font/Overlock/Overlock-BoldItalic.ttf") format("truetype");
+}
+
+body {
+	font-family: "Overlock";
+	padding-top: 70px;
+}

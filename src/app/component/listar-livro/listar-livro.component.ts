@@ -4,7 +4,8 @@ import { LivroService } from 'src/app/service/livro.service';
 
 @Component({
   selector: 'app-listar-livro',
-  templateUrl: './listar-livro.component.html',
+  // templateUrl: './listar-livro.component.html',
+  templateUrl: './listar-livro-grid.component.html',
   styleUrls: ['./listar-livro.component.css']
 })
 export class ListarLivroComponent implements OnInit {

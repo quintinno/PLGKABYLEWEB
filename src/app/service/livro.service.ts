@@ -9,7 +9,7 @@ import { LivroModel } from '../common/livro-model';
 })
 export class LivroService {
 
-  private LIVRO_URL = "http://localhost:9090/api/v1/livro";
+  private LIVRO_URL = "https://plgkabyleapi.herokuapp.com/api/v1/livro";
 
   constructor(private httpClient: HttpClient) { }
 

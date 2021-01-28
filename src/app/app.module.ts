@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 import { CategoriaLivroComponent } from './component/categoria-livro/categoria-livro.component';
+import { PesquisarLivroComponent } from './component/pesquisar-livro/pesquisar-livro.component';
 
 const routes: Routes = [
   {path: "livro", component: ListarLivroComponent},
   {path: "categoria-livro/:codigo", component: ListarLivroComponent},
+  {path: "pesquisar-livro/:nomeLivro", component: ListarLivroComponent},
   {path: "", redirectTo: "/livro", pathMatch: "full"},
-  {path: "**", component: PageNotFoundComponent}
+  {path: "**", component: PageNotFoundComponent},
 ];
 
 @NgModule({
@@ -20,7 +22,8 @@ const routes: Routes = [
     AppComponent,
     ListarLivroComponent,
     PageNotFoundComponent,
-    CategoriaLivroComponent
+    CategoriaLivroComponent,
+    PesquisarLivroComponent
   ],
   imports: [
     BrowserModule,

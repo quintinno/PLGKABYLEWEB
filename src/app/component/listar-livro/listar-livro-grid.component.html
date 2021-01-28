@@ -24,6 +24,9 @@
                         </div>
                     </div>
                 </div>
+                <div *ngIf="livroList.length == 0" class="col-md-12 alert alert-warning">
+                    <p>Nenhum livro Encontrado!</p>
+                </div>
             </div>
         </div>
     </div>

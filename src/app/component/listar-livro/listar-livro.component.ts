@@ -13,6 +13,7 @@ export class ListarLivroComponent implements OnInit {
 
   livroList: LivroModel[] = [];
   codigoCategoriaLivroSelecionado: number;
+  isPesquisarLivro: boolean;
   
   constructor(private livroService : LivroService, private activedRoute: ActivatedRoute) { }
 
@@ -23,25 +24,30 @@ export class ListarLivroComponent implements OnInit {
   }
 
   recuperarLivro() {
-
     const isCategoriaLivroCodigo: boolean = this.activedRoute.snapshot.paramMap.has("codigo");
-
     if(isCategoriaLivroCodigo) {
       this.codigoCategoriaLivroSelecionado = +this.activedRoute.snapshot.paramMap.get("codigo");
     } else {
       this.codigoCategoriaLivroSelecionado = 1;
     }
-
     this.livroService.recuperarLivro().subscribe(
       response => {
         this.livroList = response;
         console.log(this.livroList);
       }
     );
-
   }
 
   recuperarLivroPorCategoria() {
+    this.isPesquisarLivro = this.activedRoute.snapshot.paramMap.has("nomeLivro");
+    if(this.isPesquisarLivro) {
+      this.manipularRetornoPesquisaLivroList();
+    } else {
+      this.manipularRetornoLivroList();
+    }
+  }
+
+  public manipularRetornoLivroList() {
     const isCategoriaLivroCodigo: boolean = this.activedRoute.snapshot.paramMap.has("codigo");
     if(isCategoriaLivroCodigo) {
       this.codigoCategoriaLivroSelecionado = +this.activedRoute.snapshot.paramMap.get("codigo");
@@ -53,7 +59,13 @@ export class ListarLivroComponent implements OnInit {
         this.livroList = response;
       }
     );
-    
+  }
+
+  public manipularRetornoPesquisaLivroList() {
+    const nomeLivro: string = this.activedRoute.snapshot.paramMap.get("nomeLivro");
+    this.livroService.pesquisarLivroPorNome(nomeLivro).subscribe( response => {
+      this.livroList = response;
+    });
   }
 
 }

@@ -10,7 +10,8 @@ import { CategoriaLivroModel } from '../common/categoria-livro-model';
 })
 export class LivroService {
 
-  private URL_LIVRO = "https://plgkabyleapi.herokuapp.com/api/v1/livro";
+  // private URL_LIVRO = "https://plgkabyleapi.herokuapp.com/api/v1/livro";
+  private URL_LIVRO = "http://localhost:9090/api/v1/livro";
   private URL_LIVRO_RECUPERAR_CATEGORIA_LIVRO = "http://localhost:9090/api/v1/livro/search/categoria?codigo=";
   private URL_CATEGORIA_LIVRO = "http://localhost:9090/api/v1/categoria-livro/";
 
@@ -32,6 +33,13 @@ export class LivroService {
   recuperarCategoriaLivro() : Observable<CategoriaLivroModel[]> {
     return this.httpClient.get<GetResponseCategoriaLivroModel>(this.URL_CATEGORIA_LIVRO).pipe(
       map( response => response._embedded.categoriaLivro)
+    );
+  };
+
+  public pesquisarLivroPorNome(nomeLivro) : Observable<LivroModel[]> {
+    const URL_CATEGORIA_LIVRO_FORMAT = `${this.URL_LIVRO}/search/pesquisarNomeLivro?nome=${nomeLivro}`;
+    return this.httpClient.get<GetResponseLivroModel>(URL_CATEGORIA_LIVRO_FORMAT).pipe(
+      map( response => response._embedded.livroList)
     );
   };
 

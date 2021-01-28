@@ -1,0 +1,4 @@
+<div class="list-group">
+    <a routerLink="/livro" routerLinkActive="bg-primary text-white font-weight-bold" class="list-group-item">Ofertas Kabyle</a>
+    <a routerLink="/categoria-livro/{{categoria_livro_.codigo}}" *ngFor="let categoria_livro_ of categoriaLivroList" routerLinkActive="bg-primary text-white font-weight-bold" class="list-group-item">{{categoria_livro_.descricao}}</a>
+</div>

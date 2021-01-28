@@ -6,6 +6,7 @@ import { LivroService } from './service/livro.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
+import { CategoriaLivroComponent } from './component/categoria-livro/categoria-livro.component';
 
 const routes: Routes = [
   {path: "livro", component: ListarLivroComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ListarLivroComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CategoriaLivroComponent
   ],
   imports: [
     BrowserModule,

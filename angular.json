@@ -25,11 +25,13 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/library/bootstrap/css/bootstrap.min.css"
+              "src/assets/library/bootstrap/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": [
               "src/assets/library/jquery/jquery.min.js",
-              "src/assets/library/bootstrap/js/bootstrap.bundle.min.js"
+              "src/assets/library/bootstrap/js/bootstrap.bundle.min.js",
+              "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
             ]
           },
           "configurations": {

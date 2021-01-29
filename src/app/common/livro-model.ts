@@ -1,4 +1,5 @@
 export class LivroModel {
+    codigo: number;
 	sku: string;
     nome: string;
     descricao: string;

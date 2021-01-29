@@ -8,10 +8,10 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4" *ngFor="let livro_ of livroList">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" [src]="livro_.urlImagem" alt=""></a>
+                        <a routerLink="/livro/{{livro_.codigo}}"><img class="card-img-top" [src]="livro_.urlImagem" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">{{livro_.nome}}</a>
+                                <a routerLink="/livro/{{livro_.codigo}}">{{livro_.nome}}</a>
                             </h4>
                             <h5>{{livro_.precoUnitatio | currency: 'BRL':true}}</h5>
                             <p class="card-text">{{livro_.descricao}}</p>

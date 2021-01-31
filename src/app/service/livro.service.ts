@@ -43,6 +43,11 @@ export class LivroService {
     );
   };
 
+  public recuperarLivroPorCodigo(codigoLivro : number) : Observable<LivroModel> {
+    const URL_RECUPERAR_LIVRO_CODIGO = `${this.URL_LIVRO}/${codigoLivro}`;
+    return this.httpClient.get<LivroModel>(URL_RECUPERAR_LIVRO_CODIGO);
+  };
+
 }
 
 interface GetResponseLivroModel {

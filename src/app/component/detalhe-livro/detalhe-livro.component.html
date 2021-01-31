@@ -7,17 +7,17 @@
         <div class="row">
             <div class="col-12 col-md-4">
                 <div class="thumbnail">
-                    <img src="https://place-hold.it/250x300" />
+                    <img src="{{livroModel.urlImagem}}" />
                 </div>
             </div>
             <div class="col-12 col-md-8">
-                <p><b>Livro:</b> Manual de DevOps: Como Obter Agilidade, Confiabilidade e Segurança em Organizações Tecnológicas</p>
+                <p><b>Livro:</b> {{livroModel.nome}}</p>
                 <hr />
-                <p><b>Descrição:</b> Manual de DevOps: Como Obter Agilidade, Confiabilidade e Segurança em Organizações Tecnológicas</p>
+                <p><b>Descrição:</b> {{livroModel.descricao}}</p>
                 <hr />
-                <p><b>Preço:</b> R$ 89,55</p>
+                <p><b>Preço:</b> R$ {{livroModel.precoUnitatio}}</p>
                 <hr />
-                <p><b>Disponível:</b> 100</p>
+                <p><b>Disponível:</b> {{livroModel.quantidadeEstoque}}</p>
                 <hr />
                 <div class="col-12 col-md-12">
                     <a href="/" class="btn btn-success">

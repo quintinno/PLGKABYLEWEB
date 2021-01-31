@@ -5,7 +5,7 @@ export class LivroModel {
     descricao: string;
     precoUnitatio: number;
     urlImagem: string;
-    quantidaeEstoque: number;
+    quantidadeEstoque: number;
     dataCriacaoRegistro: Date;
     dataAtualizacaoRegistro: Date;
     usuarioUltimaAlteracao: string;

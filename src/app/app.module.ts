@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
 import { CategoriaLivroComponent } from './component/categoria-livro/categoria-livro.component';
 import { PesquisarLivroComponent } from './component/pesquisar-livro/pesquisar-livro.component';
 import { DetalheLivroComponent } from './component/detalhe-livro/detalhe-livro.component';
+import { JwPaginationComponent } from 'jw-angular-pagination';
 
 const routes: Routes = [
   {path: "livro/:codigo", component: DetalheLivroComponent},
@@ -26,7 +27,8 @@ const routes: Routes = [
     PageNotFoundComponent,
     CategoriaLivroComponent,
     PesquisarLivroComponent,
-    DetalheLivroComponent
+    DetalheLivroComponent,
+    JwPaginationComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@
     <div class="col-lg-9">
         <div class="row">
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4" *ngFor="let livro_ of livroList">
+                <div class="col-lg-4 col-md-6 mb-4" *ngFor="let livro_ of livroModelPaginationList">
                     <div class="card h-100">
                         <a routerLink="/livro/{{livro_.codigo}}"><img class="card-img-top" [src]="livro_.urlImagem" alt=""></a>
                         <div class="card-body">
@@ -29,5 +29,6 @@
                 </div>
             </div>
         </div>
+        <jw-pagination [items]="livroList" (changePage)="carregarProximaPagina($event)" [pageSize]="quantidadeLivroRetorno"></jw-pagination>
     </div>
 </div>

@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-12 col-md-4">
                 <div class="thumbnail">
-                    <img src="{{livroModel.urlImagem}}" />
+                    <img src="{{livroModel.urlImagem}}" height="340" />
                 </div>
             </div>
             <div class="col-12 col-md-8">
@@ -15,7 +15,7 @@
                 <hr />
                 <p><b>Descrição:</b> {{livroModel.descricao}}</p>
                 <hr />
-                <p><b>Preço:</b> R$ {{livroModel.precoUnitatio}}</p>
+                <p><b>Preço:</b> {{livroModel.precoUnitatio | currency: 'BRL':true}}</p>
                 <hr />
                 <p><b>Disponível:</b> {{livroModel.quantidadeEstoque}}</p>
                 <hr />

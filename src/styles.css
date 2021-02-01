@@ -7,3 +7,11 @@ body {
 	font-family: "Overlock";
 	padding-top: 70px;
 }
+
+a {
+	cursor: pointer;
+}
+
+.paginacao {
+	float: right;
+}

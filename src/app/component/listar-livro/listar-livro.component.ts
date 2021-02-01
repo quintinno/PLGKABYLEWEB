@@ -15,7 +15,7 @@ export class ListarLivroComponent implements OnInit {
   codigoCategoriaLivroSelecionado: number;
   isPesquisarLivro: boolean;
   public livroModelPaginationList : Array<LivroModel>; // pageOfItems
-  public quantidadeLivroRetorno : number = 6;
+  public quantidadeLivroRetorno : number = 3;
   
   constructor(private livroService : LivroService, private activedRoute: ActivatedRoute) { }
 
@@ -73,5 +73,10 @@ export class ListarLivroComponent implements OnInit {
   public carregarProximaPagina(livroModelPaginationList: Array<LivroModel>) { // pageClick
     this.livroModelPaginationList = livroModelPaginationList;
   };
+
+  public carregarQuantidadeLivroPesquisa(quantidadeLivroRetorno : number) {
+    this.quantidadeLivroRetorno = quantidadeLivroRetorno;
+    this.recuperarLivro();
+  }
 
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CarrinhoCompraItem } from 'src/app/common/carrinho-compra-item';
 import { LivroModel } from 'src/app/common/livro-model';
+import { CarrinhoSituacaoService } from 'src/app/service/carrinho-situacao.service';
 import { LivroService } from 'src/app/service/livro.service';
 
 @Component({
@@ -17,7 +19,7 @@ export class ListarLivroComponent implements OnInit {
   public livroModelPaginationList : Array<LivroModel>; // pageOfItems
   public quantidadeLivroRetorno : number = 3;
   
-  constructor(private livroService : LivroService, private activedRoute: ActivatedRoute) { }
+  constructor(private livroService : LivroService, private activedRoute: ActivatedRoute, private carrinhoSituacaoService: CarrinhoSituacaoService) { }
 
   ngOnInit(): void {
     this.activedRoute.paramMap.subscribe( () => {
@@ -77,6 +79,12 @@ export class ListarLivroComponent implements OnInit {
   public carregarQuantidadeLivroPesquisa(quantidadeLivroRetorno : number) {
     this.quantidadeLivroRetorno = quantidadeLivroRetorno;
     this.recuperarLivro();
+  }
+
+  public adicionarProdutoCarrinhoCompra(livroModel: LivroModel) {
+    console.log(livroModel);
+    const carrinhoCompraItem = new CarrinhoCompraItem(livroModel);
+    this.carrinhoSituacaoService.adicionarProdutoCarrinhoCompra(carrinhoCompraItem);
   }
 
 }

@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
     <a class="navbar-brand" href="/">Kabyle Livraria</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -24,10 +25,12 @@
         <li class="nav-item">
           <a class="nav-link" href="/">Novidades</a>
         </li>
+        <li class="nav-item active">
+          <app-carrinho-situacao></app-carrinho-situacao>
+        </li>
       </ul>
     </div>
-  </div>
-</nav>
+</nav>  
 
 <div class="container">
   <router-outlet></router-outlet>

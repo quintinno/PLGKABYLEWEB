@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-3">
+        <app-categoria-livro></app-categoria-livro>
+    </div>
+    <div class="col-md-9">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <thead class="bg-dark text-light">
+                        <tr>
+                            <td width="20%">Imagem</td>
+                            <td width="50%">Nome</td>
+                            <td width="30%">Ações</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="http://placehold.it/150x200"/>
+                            </td>
+                            <td>
+                                <p><b>Produto</b>: MySQL: Comece com o principal banco de dados open source do mercado</p>
+                                <p><b>Valor</b>: {{600 | currency: "BRL"}}</p>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p><b>Quantidade</b>: 2</p>
+                                    </div>
+                                    <div class="col-md-12 mt-2">
+                                        <p><b>Subtotal</b>: {{600 | currency: "BRL"}}</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>
+                                <p><b>Total</b>: 2</p>
+                                <p><b>Frete</b>: Grátis</p>
+                                <p><b>Total da compra</b>: {{600 | currency: "BRL"}}</p>
+                            </td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>

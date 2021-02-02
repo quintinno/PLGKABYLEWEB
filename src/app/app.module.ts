@@ -11,8 +11,10 @@ import { PesquisarLivroComponent } from './component/pesquisar-livro/pesquisar-l
 import { DetalheLivroComponent } from './component/detalhe-livro/detalhe-livro.component';
 import { JwPaginationComponent } from 'jw-angular-pagination';
 import { CarrinhoSituacaoComponent } from './component/carrinho-situacao/carrinho-situacao.component';
+import { CarrinhoDetalheComponent } from './component/carrinho-detalhe/carrinho-detalhe.component';
 
 const routes: Routes = [
+  {path: "carrinho-detalhe", component: CarrinhoDetalheComponent},
   {path: "livro/:codigo", component: DetalheLivroComponent},
   {path: "livro", component: ListarLivroComponent},
   {path: "categoria-livro/:codigo", component: ListarLivroComponent},
@@ -30,7 +32,8 @@ const routes: Routes = [
     PesquisarLivroComponent,
     DetalheLivroComponent,
     JwPaginationComponent,
-    CarrinhoSituacaoComponent
+    CarrinhoSituacaoComponent,
+    CarrinhoDetalheComponent
   ],
   imports: [
     BrowserModule,
